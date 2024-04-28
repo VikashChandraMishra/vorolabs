@@ -36,8 +36,8 @@ export default function Home() {
                 <AccordionTrigger>Agent Selector</AccordionTrigger>
                 <AccordionContent>
                   {
-                    agents.map((agent) => (
-                      <div className="w-5/6 px-2 py-2 hover:bg-slate-700 rounded-xl text-sm cursor-pointer">{agent}</div>
+                    agents.map((agent, i) => (
+                      <div key={i} className="w-5/6 px-2 py-2 hover:bg-slate-700 rounded-xl text-sm cursor-pointer">{agent}</div>
                     ))
                   }
                 </AccordionContent>
@@ -56,8 +56,8 @@ export default function Home() {
                 <AccordionTrigger>Chats</AccordionTrigger>
                 <AccordionContent>
                   {
-                    chats.map((chat) => (
-                      <div className="w-5/6 px-2 py-2 hover:bg-slate-700 rounded-xl text-sm cursor-pointer">{chat}</div>
+                    chats.map((chat, i) => (
+                      <div key={i} className="w-5/6 px-2 py-2 hover:bg-slate-700 rounded-xl text-sm cursor-pointer">{chat}</div>
                     ))
                   }
                 </AccordionContent>
