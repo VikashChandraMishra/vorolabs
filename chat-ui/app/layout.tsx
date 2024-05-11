@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./tailwind.css";
+import Navbar from "@/components/navbar";
+import { usePathname } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Vorolabs",
@@ -11,9 +13,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
